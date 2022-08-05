@@ -37,7 +37,7 @@ crc32__generic (const uint8_t *buf, size_t len) {
 
   const uint32_t *view = (const uint32_t *) buf;
 
-  while (len >= 32) {
+  while (len >= 64) {
     for (int i = 0; i < 4; i++) {
       uint32_t a = *view++ ^ crc__swap_uint32_if_be(crc);
       uint32_t b = *view++;
@@ -81,7 +81,7 @@ crc32__generic (const uint8_t *buf, size_t len) {
       }
     }
 
-    len -= 32;
+    len -= 64;
   }
 
   buf = (const uint8_t *) view;
