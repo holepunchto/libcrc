@@ -4,9 +4,9 @@
 #include <stddef.h>
 #include <stdint.h>
 
-#ifdef __aarch64__
+#if defined(__aarch64__)
 #define CRC_ARCH_ARM
-#elif __x86_64__
+#elif defined(__x86_64__) && defined(__SSE4_2__)
 #define CRC_ARCH_INTEL
 #else
 #define CRC_ARCH_GENERIC
