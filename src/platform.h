@@ -6,6 +6,8 @@
 
 #ifdef __aarch64__
 #define CRC_ARCH_ARM
+#elif __x86_64__
+#define CRC_ARCH_INTEL
 #else
 #define CRC_ARCH_GENERIC
 #endif
@@ -15,5 +17,8 @@ crc32__generic (const uint8_t *buf, size_t len);
 
 crc32_t
 crc32__arm (const uint8_t *buf, size_t len);
+
+crc32_t
+crc32__intel (const uint8_t *buf, size_t len);
 
 #endif // CRC_PLATFORM_H

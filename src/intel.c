@@ -1,5 +1,5 @@
 /**
- * The ARM implementation of CRC32 is based on the CRC32C library by Google,
+ * The Intel implementation of CRC32 is based on the CRC32C library by Google,
  * see https://github.com/google/crc32c.
  *
  * Copyright (c) 2017 The CRC32C Authors
@@ -35,32 +35,34 @@
 #include "../include/crc.h"
 #include "platform.h"
 
-#ifdef CRC_ARCH_ARM
+#ifdef CRC_ARCH_INTEL
 
-#include <arm_acle.h>
+#include <nmmintrin.h>
 
 crc32_t
-crc32__arm (const uint8_t *buf, size_t len) {
-  uint32_t crc = ~0;
+crc32__intel (const uint8_t *buf, size_t len) {
+  uint64_t crc64 = ~0;
 
   while (len >= 8) {
-    crc = __crc32d(crc, *(const uint64_t *) buf);
+    crc64 = _mm_crc32_u64(crc64, *(const uint64_t *) buf);
     buf += 8;
     len -= 8;
   }
 
+  uint32_t crc = (uint32_t) crc64;
+
   if (len & 4) {
-    crc = __crc32w(crc, *(const uint32_t *) buf);
+    crc = _mm_crc32_u32(crc, *(const uint32_t *) buf);
     buf += 4;
   }
 
   if (len & 2) {
-    crc = __crc32h(crc, *(const uint16_t *) buf);
+    crc = _mm_crc32_u16(crc, *(const uint16_t *) buf);
     buf += 2;
   }
 
   if (len & 1) {
-    crc = __crc32b(crc, *buf);
+    crc = _mm_crc32_u8(crc, *buf);
   }
 
   return ~crc;

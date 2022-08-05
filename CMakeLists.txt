@@ -19,6 +19,7 @@ target_sources(
     src/arm.c
     src/endian.c
     src/generic.c
+    src/intel.c
     src/lookup.c
     src/shared.c
 )
