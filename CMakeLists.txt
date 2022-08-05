@@ -16,6 +16,7 @@ target_sources(
   INTERFACE
     include/crc.h
   PRIVATE
+    src/arm.c
     src/endian.c
     src/generic.c
     src/lookup.c
