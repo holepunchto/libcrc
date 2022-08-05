@@ -6,9 +6,9 @@
 
 crc32_t
 crc32 (const uint8_t *buf, size_t len) {
-#ifdef CRC_ARCH_ARM
+#if defined(CRC_ARCH_ARM)
   return crc32__arm(buf, len);
-#elif CRC_ARCH_INTEL
+#elif defined(CRC_ARCH_INTEL)
   return crc32__intel(buf, len);
 #else
   return crc32__generic(buf, len);
