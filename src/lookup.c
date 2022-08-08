@@ -2323,7 +2323,6 @@ const uint32_t crc__lookup[16][256] = {
     0x5e341808,
     0x494f0c4b,
   },
-
   {
     0x00000000,
     0xefc26b3e,
@@ -2582,7 +2581,6 @@ const uint32_t crc__lookup[16][256] = {
     0x0e85bc2a,
     0xe147d714,
   },
-
   {
     0x00000000,
     0xc18edfc0,
@@ -2841,7 +2839,6 @@ const uint32_t crc__lookup[16][256] = {
     0xdbb54c6a,
     0x1a3b93aa,
   },
-
   {
     0x00000000,
     0x9ba54c6f,
@@ -3100,7 +3097,6 @@ const uint32_t crc__lookup[16][256] = {
     0xadbc3d0a,
     0x36197165,
   },
-
   {
     0x00000000,
     0xdd96d985,
@@ -3359,7 +3355,6 @@ const uint32_t crc__lookup[16][256] = {
     0xe0785523,
     0x3dee8ca6,
   },
-
   {
     0x00000000,
     0x9d0fe176,
@@ -3618,7 +3613,6 @@ const uint32_t crc__lookup[16][256] = {
     0xa2870927,
     0x3f88e851,
   },
-
   {
     0x00000000,
     0xb9fbdbe8,
@@ -3877,7 +3871,6 @@ const uint32_t crc__lookup[16][256] = {
     0xa5a83262,
     0x1c53e98a,
   },
-
   {
     0x00000000,
     0xae689191,
