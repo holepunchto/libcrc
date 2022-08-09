@@ -4,7 +4,7 @@
 #include <stddef.h>
 #include <stdint.h>
 
-#if defined(__aarch64__)
+#if defined(__aarch64__) && defined(__ARM_NEON__)
 #define CRC_ARCH_ARM
 #elif defined(__x86_64__) && defined(__SSE4_2__)
 #define CRC_ARCH_INTEL
