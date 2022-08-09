@@ -29,8 +29,6 @@
 #include "lookup.h"
 #include "platform.h"
 
-#ifdef CRC_ARCH_GENERIC
-
 crc32_t
 crc32__generic (const uint8_t *buf, size_t len) {
   uint32_t crc = ~0;
@@ -92,5 +90,3 @@ crc32__generic (const uint8_t *buf, size_t len) {
 
   return ~crc;
 }
-
-#endif

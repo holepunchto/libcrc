@@ -21,4 +21,7 @@ crc32__arm (const uint8_t *buf, size_t len);
 crc32_t
 crc32__intel (const uint8_t *buf, size_t len);
 
+int
+crc__is_process_translated ();
+
 #endif // CRC_PLATFORM_H

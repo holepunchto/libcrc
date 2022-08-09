@@ -41,6 +41,9 @@
 
 crc32_t
 crc32__intel (const uint8_t *buf, size_t len) {
+  // Fall back to generic algorithm for translated processes.
+  if (crc__is_process_translated()) return crc32__generic(buf, len);
+
   uint64_t crc64 = ~0;
 
   while (len >= 8) {
