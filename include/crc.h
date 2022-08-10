@@ -16,4 +16,4 @@ crc32 (const uint8_t *buf, size_t len);
 #ifdef __cplusplus
 }
 #endif
-#endif // FS_EXT_H
+#endif // CRC_H
