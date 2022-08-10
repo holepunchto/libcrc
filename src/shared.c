@@ -28,8 +28,7 @@ crc__is_process_translated () {
   size_t size = sizeof(ret);
 
   if (sysctlbyname("sysctl.proc_translated", &ret, &size, NULL, 0) == -1) {
-    if (errno == ENOENT) return 0;
-    return -1;
+    return errno == ENOENT ? 0 : -1;
   }
 #endif
 
