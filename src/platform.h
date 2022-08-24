@@ -4,7 +4,7 @@
 #include <stddef.h>
 #include <stdint.h>
 
-#if defined(__aarch64__) && defined(__ARM_NEON__)
+#if defined(__aarch64__) && defined(__ARM_NEON)
 #define CRC_ARCH_ARM
 #else
 #define CRC_ARCH_GENERIC
