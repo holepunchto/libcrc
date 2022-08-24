@@ -1,6 +1,6 @@
 # libcrc
 
-Cross-platform implementation of CRC32 with hardware acceleration for ARM and Intel processors. Uses a portable, generic implementation when hardware acceleration is not possible.
+Cross-platform implementation of CRC32 with hardware acceleration for ARM processors. Uses a portable, generic implementation when hardware acceleration is not possible.
 
 ## API
 
