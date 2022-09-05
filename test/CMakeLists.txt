@@ -3,11 +3,13 @@ list(APPEND tests
 )
 
 foreach(test IN LISTS tests)
-  add_executable(
-    test_${test}
-    ${test}.c
-    $<TARGET_OBJECTS:crc>
-  )
+  add_executable(${test} ${test}.c)
 
-  add_test(${test} test_${test})
+  target_link_libraries(${test} crc_static)
+
+  add_test(
+    NAME ${test}
+    COMMAND ${test}
+    WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+  )
 endforeach()

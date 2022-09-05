@@ -49,6 +49,8 @@ install(TARGETS crc_shared crc_static)
 
 install(FILES include/crc.h DESTINATION include)
 
-enable_testing()
+if(PROJECT_IS_TOP_LEVEL)
+  enable_testing()
+  add_subdirectory(test)
+endif()
 
-add_subdirectory(test)
