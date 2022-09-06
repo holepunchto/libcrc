@@ -8,10 +8,8 @@ extern "C" {
 #include <stddef.h>
 #include <stdint.h>
 
-typedef uint32_t crc32_t;
-
-crc32_t
-crc32 (const uint8_t *buf, size_t len);
+uint32_t
+crc_u32 (const uint8_t *buf, size_t len);
 
 #ifdef __cplusplus
 }

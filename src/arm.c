@@ -39,8 +39,8 @@
 
 #include <arm_acle.h>
 
-crc32_t
-crc32 (const uint8_t *buf, size_t len) {
+uint32_t
+crc_u32 (const uint8_t *buf, size_t len) {
   uint32_t crc = ~0;
 
   while (len >= 8) {
