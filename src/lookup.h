@@ -3,10 +3,6 @@
 
 #include <stdint.h>
 
-#include "arch.h"
-
-#ifdef CRC_ARCH_GENERIC
-
 const uint32_t crc__lookup[16][256] = {
   {
     0x00000000,
@@ -4137,7 +4133,5 @@ const uint32_t crc__lookup[16][256] = {
     0x0d7139d7,
   },
 };
-
-#endif
 
 #endif // CRC_LOOKUP_H

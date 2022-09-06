@@ -1,7 +1,4 @@
 #include "endian.h"
-#include "arch.h"
-
-#ifdef CRC_ARCH_GENERIC
 
 // See https://github.com/nodejs/node/blob/master/src/util.h
 static const union {
@@ -37,5 +34,3 @@ crc__swap_uint32_if_be (uint32_t n) {
   if (crc__is_le()) return n;
   return crc__swap_uint32(n);
 }
-
-#endif

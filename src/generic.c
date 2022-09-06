@@ -26,10 +26,11 @@
 
 #include "../include/crc.h"
 #include "arch.h"
-#include "endian.h"
-#include "lookup.h"
 
 #ifdef CRC_ARCH_GENERIC
+
+#include "endian.h"
+#include "lookup.h"
 
 crc32_t
 crc32 (const uint8_t *buf, size_t len) {
