@@ -21,7 +21,6 @@ target_sources(
     src/endian.c
     src/endian.h
     src/generic.c
-    src/lookup.c
     src/lookup.h
 )
 
