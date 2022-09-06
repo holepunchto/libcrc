@@ -33,14 +33,14 @@
 #include <stdint.h>
 
 #include "../include/crc.h"
-#include "platform.h"
+#include "arch.h"
 
 #ifdef CRC_ARCH_ARM
 
 #include <arm_acle.h>
 
 crc32_t
-crc32__arm (const uint8_t *buf, size_t len) {
+crc32 (const uint8_t *buf, size_t len) {
   uint32_t crc = ~0;
 
   while (len >= 8) {

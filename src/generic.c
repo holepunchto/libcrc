@@ -25,14 +25,14 @@
 #include <stdint.h>
 
 #include "../include/crc.h"
+#include "arch.h"
 #include "endian.h"
 #include "lookup.h"
-#include "platform.h"
 
 #ifdef CRC_ARCH_GENERIC
 
 crc32_t
-crc32__generic (const uint8_t *buf, size_t len) {
+crc32 (const uint8_t *buf, size_t len) {
   uint32_t crc = ~0;
 
   const uint32_t *view = (const uint32_t *) buf;

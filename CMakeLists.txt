@@ -16,11 +16,13 @@ target_sources(
   INTERFACE
     include/crc.h
   PRIVATE
+    src/arch.h
     src/arm.c
     src/endian.c
+    src/endian.h
     src/generic.c
     src/lookup.c
-    src/shared.c
+    src/lookup.h
 )
 
 target_include_directories(
