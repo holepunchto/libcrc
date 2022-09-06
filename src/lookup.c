@@ -1,5 +1,7 @@
 #include <stdint.h>
 
+#include "arch.h"
+
 #ifdef CRC_ARCH_GENERIC
 
 const uint32_t crc__lookup[16][256] = {

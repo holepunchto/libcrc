@@ -1,4 +1,5 @@
 #include "endian.h"
+#include "arch.h"
 
 #ifdef CRC_ARCH_GENERIC
 
