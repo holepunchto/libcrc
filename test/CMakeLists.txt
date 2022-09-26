@@ -5,7 +5,7 @@ list(APPEND tests
 foreach(test IN LISTS tests)
   add_executable(${test} ${test}.c)
 
-  target_link_libraries(${test} crc_static)
+  target_link_libraries(${test} crc_shared)
 
   add_test(
     NAME ${test}
