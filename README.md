@@ -4,7 +4,7 @@ Cross-platform implementation of CRC32 with hardware acceleration for ARM proces
 
 ## API
 
-See [`includes/crc.h`](include/crc.h) for the public API.
+See [`include/crc.h`](include/crc.h) for the public API.
 
 ## License
 
