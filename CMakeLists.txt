@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.22)
 
 project(crc C)
 
+set(CRC_FORCE_FALLBACK OFF CACHE BOOL "Force the use of a software implementation of CRC")
+
 add_library(crc OBJECT)
 
 set_target_properties(
@@ -30,6 +32,14 @@ target_include_directories(
   PUBLIC
     include
 )
+
+if(CRC_FORCE_FALLBACK)
+  target_compile_definitions(
+    crc
+    PRIVATE
+      CRC_FORCE_FALLBACK
+  )
+endif()
 
 add_library(crc_shared SHARED $<TARGET_OBJECTS:crc>)
 
