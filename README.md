@@ -8,4 +8,4 @@ See [`include/crc.h`](include/crc.h) for the public API.
 
 ## License
 
-ISC
+Apache 2.0
