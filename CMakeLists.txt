@@ -41,7 +41,7 @@ if(CRC_FORCE_FALLBACK)
   )
 endif()
 
-add_library(crc_shared SHARED $<TARGET_OBJECTS:crc>)
+add_library(crc_shared SHARED)
 
 set_target_properties(
   crc_shared
@@ -50,12 +50,24 @@ set_target_properties(
   WINDOWS_EXPORT_ALL_SYMBOLS ON
 )
 
-add_library(crc_static STATIC $<TARGET_OBJECTS:crc>)
+target_link_libraries(
+  crc_shared
+  PUBLIC
+    crc
+)
+
+add_library(crc_static STATIC)
 
 set_target_properties(
   crc_static
   PROPERTIES
   OUTPUT_NAME crc
+)
+
+target_link_libraries(
+  crc_static
+  PUBLIC
+    crc
 )
 
 install(TARGETS crc_shared crc_static)
