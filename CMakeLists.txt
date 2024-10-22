@@ -62,6 +62,7 @@ set_target_properties(
   crc_static
   PROPERTIES
   OUTPUT_NAME crc
+  PREFIX lib
 )
 
 target_link_libraries(
