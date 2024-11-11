@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "name": "libcrc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holepunchto/libcrc.git"
+  },
+  "author": "Holepunch",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/holepunchto/libcrc/issues"
+  },
+  "homepage": "https://github.com/holepunchto/libcrc#readme"
+}
